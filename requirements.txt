@@ -2,8 +2,10 @@
 # Versions chosen for compatibility with Google Colab (as of 2025)
 
 tensorflow==2.12.0
-numpy==1.24.3
+numpy==1.23.5
 pandas==1.5.3
 scikit-learn==1.2.2
+joblib==1.2.0
+h5py==3.8.0
 matplotlib==3.7.1
 seaborn==0.12.2
