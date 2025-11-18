@@ -11,6 +11,9 @@ def preprocess(path):
     y = df["y"]
 
     scaler = StandardScaler()
-    x_scaled = scaler.fit_transform(x)
-    x_train, x_test, y_train, y_test = train_test_split(x_scaled, y, test_size=0.2)
+    x_train_unscaled, x_test_unscaled, y_train, y_test = train_test_split(x, y, test_size=0.2)
+
+    scaler = StandardScaler()
+    x_train = scaler.fit_transform(x_train_unscaled)
+    x_test = scaler.transform(x_test_unscaled)
     return x_train, x_test, y_train, y_test

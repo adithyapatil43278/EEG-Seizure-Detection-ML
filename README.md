@@ -37,7 +37,7 @@ Pipeline implemented in `src/` and orchestrated by `main.py`.
 	- Output: Dense(4, `softmax`).
 	- Optimizer: Adam(lr=0.001); Loss: sparse categorical cross‑entropy.
 	- EarlyStopping on `val_loss` (patience=10, restore best weights).
-	- Trained up to 300 epochs, batch size 64, `validation_split=0.2`.
+	- Trained up to 100 epochs, batch size 64, `validation_split=0.2`.
 	- Saved to `models/nn_model.h5`.
 
 - Evaluation (`src/evaluate.py`)

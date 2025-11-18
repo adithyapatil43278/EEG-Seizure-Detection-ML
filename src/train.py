@@ -60,7 +60,7 @@ def train_nn(x_train, y_train):
         tf.keras.layers.Dense(4, activation='softmax'),
     ])
     nn_model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate=0.001), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-    history = nn_model.fit(x_train, y_train, epochs=300, batch_size=64, validation_split=0.2, verbose=1, callbacks=[early_stop])
+    history = nn_model.fit(x_train, y_train, epochs=100, batch_size=64, validation_split=0.2, verbose=1, callbacks=[early_stop])
 
     os.makedirs("models", exist_ok=True)
     nn_model.save("models/nn_model.h5")
